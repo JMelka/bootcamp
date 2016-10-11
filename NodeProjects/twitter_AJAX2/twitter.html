@@ -1,0 +1,81 @@
+<DOCTYPE! html>
+<html>
+
+<head>
+<title>Twitter Clone</title>
+
+<link rel="stylesheet" href="static/twitter.css">
+
+
+</head>
+
+<body>
+
+<h1>Twitter Clone<h1>    
+
+<h2>Create User</h2>
+
+Name: <input type="text" name="name" id="name">  <br>
+Password: <input type="text" name="password" id="password">
+<br>
+<input type="submit" value="Submit" id="submitButton">
+
+<br><br>
+<div id="searchResults" style="border:none;">
+    Search Results Here.
+</div>
+
+<br>
+<hr>
+<br>
+
+<h2>Login</h2>
+
+Name: <input type="text" name="name" id="loginname">  <br>
+Password: <input type="text" name="password" id="loginpassword">
+<br>
+<input type="submit" value="Submit" id="submitLogin">
+
+<br><br>
+<div id="loginResults" style="border:none;">
+    Login Results Here.
+</div>
+
+<br>
+<hr>
+<br>
+
+<h2>Create Tweet</h2>
+
+User Name: <input type="text" name="message" id="userName" readonly="readonly"> <br>
+Message: <input type="text" name="message" id="message"> 
+<br>
+<input type="submit" value="Submit" id="submitMessage">
+
+
+
+<br><br>
+
+<br>
+<hr>
+<br>
+
+<h2>Tweet Feed</h2>
+
+<div id="tweetArea" style="border:none;">
+    <h3>Tweets Here:<h3>
+</div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<br>
+<input type="submit" value="Get Tweets" id="submitGetTweets">
+<br>
+
+</body>
+
+<script src="static/twitter.js"></script>
+</html>

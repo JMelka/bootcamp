@@ -1,0 +1,39 @@
+<html ng-app="InstaApp">
+
+<head>
+    <title>AngularApp for InstaScam</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+    <script>
+        var InstaApp = angular.module('InstaApp', []);
+        InstaApp.controller('InstaCtrl', function ($scope, $http) {
+            $scope.getPictures = function(){
+                $http.get("/getPictures/" + $scope.userName, {cache: false}).then(function(response) {
+                    console.dir(response);
+                    console.log($scope.userName);
+                    $scope.pictures = response.data;
+                });
+            };
+        });
+    </script>
+</head>
+
+
+<body ng-controller="InstaCtrl">
+    <form ng-submit="getPictures()">
+        <input type="text" ng-model="userName">
+        <input type="submit" value="userPics">
+
+    <table>
+        <tr>
+            <th>User Picture</th>
+            <th>User Picture Name</th>
+        </tr>
+        <tr ng-repeat="picture in pictures">
+            <td><img ng-src="/static/photos/JMelka/{{picture.SystemFileName}}" width="100" /></td>
+            <td>{{picture.ActualFileName}}</td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

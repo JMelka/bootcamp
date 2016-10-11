@@ -1,0 +1,78 @@
+<html ng-app="InstaApp">
+
+<head>
+    <title>Add Comment for InstaScam</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    
+    <script>
+        var InstaApp = angular.module('InstaApp', []);
+        InstaApp.controller('InstaCtrl', function ($scope, $http) {
+
+            $scope.master = {pictureId:"", userName:"", message:"message goes here"};
+            $scope.reset = function() {
+                $scope.pictureComment = angular.copy($scope.master);
+            };
+            $scope.reset();
+
+
+            $scope.getPictureComments = function(){
+                $http.get("/getPictureComments/" + $scope.pictureComment.pictureId, {cache: false}).then(function(response) {
+                    console.dir(response);
+                    console.log($scope.pictureComment.pictureId);
+                    $scope.comments = response.data;
+                });
+            };
+
+            $scope.insertComment = function(){
+                $http.put("/insertComment/", {cache: false}).then(function(response) {
+                    console.dir(response);
+                    console.log($scope.pictureComment.pictureId);
+                    $scope.comments = response.data;
+                });
+            };
+
+        });
+    </script>
+</head>
+
+
+<body ng-controller="InstaCtrl">
+    <form name="myCommentForm">
+        <strong>PictureId: </strong><input name="myPictureId" type="text" required ng-model="pictureComment.pictureId">
+        <span ng-show="myCommentForm.myPictureId.$error.required">PictureId is a required field.</span>
+        <br>
+        <button ng-click="getPictureComments()">Search</button>
+        <button ng-click="reset()">Clear</button><br>
+        <br>
+        <strong> UserName: </strong><input type="text" ng-model="pictureComment.userName"><br>
+        <strong>Comment: </strong><input type="text" ng-model="pictureComment.message"><br>
+        <button ng-click="insertComment()">Add Comment</button>
+        <br>
+<div>
+    <u><strong>Below are the following comments for PictureId: {{pictureComment.pictureId}}</strong></U>
+    <br>
+    <br>
+    <table border="solid">
+        <tr>
+            <th>Comment Id</th>
+            <th>Pic Id</th>
+            <th>User Name</th>
+            <th>Comment</th>
+            <th>Insert Timestamp</th>
+        </tr>
+        <tr ng-repeat="comment in comments">
+            <td>{{comment.CommentId}}</td>
+            <td>{{comment.PictureId}}</td>
+            <td>{{comment.UserName}}</td>
+            <td>{{comment.Message}}</td>
+            <td>{{comment.Date}}</td>
+        </tr>
+    </table>
+</div>
+</form>
+
+  <p>form = {{pictureComment}}</p>
+  <p>master = {{master}}</p>
+
+</body>
+</html>
