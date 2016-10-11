@@ -1,0 +1,15 @@
+[DEFAULT]
+BASEURL=https://www.youtube.com/watch?v=MhkGQAoc7bc&list=PLoYCgNOIyGABj2GQSlDRjgvXtqfDxKm5b
+[DOC_google_companion_/4061/ytpwatch_0]
+BASEURL=https://www.youtube.com/watch?v=MhkGQAoc7bc&list=PLoYCgNOIyGABj2GQSlDRjgvXtqfDxKm5b
+ORIGURL=javascript:"<html><body style='background:transparent'></body></html>"
+[DOC#1727]
+BASEURL=https://www.youtube.com/watch?v=MhkGQAoc7bc&list=PLoYCgNOIyGABj2GQSlDRjgvXtqfDxKm5b
+ORIGURL=javascript:""
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,11
+[InternetShortcut]
+URL=https://www.youtube.com/watch?v=MhkGQAoc7bc&list=PLoYCgNOIyGABj2GQSlDRjgvXtqfDxKm5b
+IDList=
+IconFile=https://s.ytimg.com/yts/img/favicon_32-vfl8NGn4k.png
+IconIndex=1

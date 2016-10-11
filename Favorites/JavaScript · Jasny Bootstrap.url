@@ -1,0 +1,15 @@
+[DEFAULT]
+BASEURL=http://www.jasny.net/bootstrap/javascript/
+[DOC_twitter-widget-0]
+BASEURL=http://platform.twitter.com/widgets/follow_button.c6def25548e9590b13abaa1b3330b811.en.html
+ORIGURL=http://platform.twitter.com/widgets/follow_button.c6def25548e9590b13abaa1b3330b811.en.html#dnt=false&id=twitter-widget-0&lang=en&screen_name=ArnoldDaniels&show_count=true&show_screen_name=true&size=m&time=1475038996539
+[DOC_twitter-widget-1]
+BASEURL=http://platform.twitter.com/widgets/tweet_button.c6def25548e9590b13abaa1b3330b811.en.html
+ORIGURL=http://platform.twitter.com/widgets/tweet_button.c6def25548e9590b13abaa1b3330b811.en.html#dnt=false&id=twitter-widget-1&lang=en&original_referer=http%3A%2F%2Fwww.jasny.net%2Fbootstrap%2Fjavascript%2F%23fileinput&size=m&text=JavaScript%20%C2%B7%20Jasny%20Bootstrap&time=1475038996545&type=share&url=http%3A%2F%2Fjasny.github.io%2Fbootstrap&via=ArnoldDaniels
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,2
+[InternetShortcut]
+URL=http://www.jasny.net/bootstrap/javascript/#fileinput
+IDList=
+IconFile=http://www.jasny.net/bootstrap/assets/ico/favicon.png
+IconIndex=1

@@ -1,0 +1,8 @@
+        {"email": "JMelka@LetGo.com",
+        "userId": "1",
+        "description": "blaa",
+        "price": "24.35",
+        "category": "node",
+        "location": "SSA",
+        "photo": "photo123"
+    	}

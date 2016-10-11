@@ -1,0 +1,81 @@
+
+function getPictures(userName) {
+    console.log("db.js getPictures(userName): " + userName)
+    return new Promise(function (resolve, reject) {
+        var stmt = "SELECT A.PictureId, A.UserName, A.ActualFileName, A.SystemFileName, A.Insrt_TS as PictureDate, B.CommentId as CommentId, B.UserName as CommentName, B.Message as Message, B.Insrt_TS as CommentDate FROM Picture as A left outer join Comment as B on A.PictureId = B.PictureId where A.UserName = ?";
+        db.all(stmt, userName, function (err, rows) {
+            if (err) {
+                reject(err);
+                return;
+            }
+            resolve(rows);
+        });
+    });
+}
+
+
+
+
+ <div id="picCommentFeed">
+                        {
+                            this.state.picCommentList.map(function (val, idx) {
+                                return <PicComment key={idx} data={val}/>;
+                            })
+                        }
+
+                    </div>
+
+
+
+
+var PicCommentList = React.createClass({
+    getInitialState: function () {
+        return { picCommentList: [] };
+    },
+
+    componentDidMount: function () {
+        this.getDbPicComments();
+    },
+
+    getDbPicComments: function () {
+        var that = this;
+        console.log(data.PictureId);
+        $.getJSON("/getPictureComments/" + data.PictureId, function (data) {
+            that.setState({ picCommentList: data });
+        });
+    },
+
+    render: function () {
+        return (
+            <div id="picCommentFeed">
+                {
+                    this.state.picCommentList.map(function (val, idx) {
+                        return <PicComment key={idx} data={val}/>;
+                    })
+                }
+
+            </div>
+
+        );
+    }
+});
+
+var PicComment = React.createClass({
+    getInitialState: function () {
+        return {};
+    },
+
+    render: function () {
+        var data = this.props.data;
+        return (
+            <div className="row">
+                <div className="span2 offset5">
+                    <br/>
+                    Date: {data.Date}
+                    User: {data.UserName}
+                    Message: {data.Message}
+                </div>
+            </div>
+        );
+    }
+});

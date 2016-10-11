@@ -1,0 +1,106 @@
+﻿Course overview
+
+General:
+    version control with Git
+    Javascript
+    async API's, Promises
+    Test-Driven Development, Mocha
+
+Back end:
+    Node, NPM
+    SQLite
+    HTTP, RESTful API's
+    microservices
+    Docker containers
+    Continuous Integration with Jenkins
+
+Front end:
+    HTML, CSS
+    DOM methods
+    React + Redux
+    Angular 1.x
+
+Projects (tentative):
+    Twitter clone
+    Instagram clone
+    Reddit clone
+    Slack clone
+    final project
+
+Tuesday, Sept. 6th
+
+set up slack accounts
+install git, slack, firefox, chrome, postman for chrome, Sqlite manager for firefox
+set up github accounts
+Git data model and basic commands    
+demo Gitk and other git visualization tools
+install Node
+`npm init` and `npm install`
+    Javascript functions
+    Javascript expressions, statements, arrays, objects
+    install Visual Studio Code
+    debugging with VSC
+    getting console input with prompt-sync package
+    console-based number-guessing game
+    console-based rock-paper-scissors game
+    create a JS class: Stack exercise
+testing with Mocha
+
+Wednesday, Sept. 7th
+
+talk about testing: unit testing, system testing, mocking/stubs, dependency injection
+Clean code talks: Unit Testing
+Clean code talks: Dependency Injection
+http://rbcs-us.com/documents/Why-Most-Unit-Testing-is-Waste.pdf
+closures
+arrow functions
+for-in loops, for-of loops
+new operator
+variadic functions with arguments array and ...param
+exceptions
+node thread model
+callbacks
+reading / writing files sync
+reading / writing files async
+node streams
+promises
+testing async with mocha and chai-as-promised
+SQLite3 for Node
+    RESTful API’s
+    Microservices (talk by Martin Fowler)
+https://en.wikipedia.org/wiki/Microservices
+    microservices vs monolithic SOA:
+    pro: more flexible deployment / scaling
+    pro: get away from heavy-weight dependencies, overly-prescriptive frameworks
+    pro: cuts down friction in large organizations
+    pro: get away from single-language, -platform dependence
+    pro: embrace component failure / redundancy
+
+    con: more network overhead
+    con: consistency / coherence problems
+    con: if you get too fine-grained, the services often get too abstract
+    con: adds unnecessary indirection / fracturing for small teams    
+    con: end up with large system composed out of excessive number of languages/platforms
+    con: constructing out of smaller pieces may require more glue
+    con: embrace component failure / redundancy: tolerating/hiding bugs that should be fixed
+    con: how do I debug across separate services?
+    con: https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing
+
+Thursday, Sept. 8th
+
+Project: Twitter clone back end
+Using Postman
+Docker containers
+https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
+
+Friday, Sept. 9th
+
+Hot reloading with webpack
+Git branching
+
+
+
+
+
+
+

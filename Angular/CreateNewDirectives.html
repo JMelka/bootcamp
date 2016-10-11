@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<script>
+var app = angular.module("myApp", []);
+app.directive("w3TestDirective", function() {
+    return {
+        restrict : "EACM",
+        replace : true,
+        template : "<h1>Create a new directive by John!</h1>"
+    };
+});
+</script>
+
+</head>
+
+
+<body ng-app="myApp" ng-init="names=['E for Element name','A for Attribute','C for Class','M for Comment',]">
+
+<br>
+  <ul>
+     <li ng-repeat="x in names">
+      {{ x }}
+     </li>
+   </ul>
+<br>
+<strong>Note: </strong>By default the value is EA, meaning that both Element names and attribute names can invoke the directive.<br>
+
+<br>
+Element:<br>
+<w3-test-directive></w3-test-directive>
+<br>
+
+Attribute:<br>
+<div w3-test-directive></div>
+<br>
+
+Class:<br>
+<div class="w3-test-directive"></div>
+
+<br>
+Comment:<br>
+restrict : "M",
+replace : true,
+<br>
+<!-- directive: w3-test-directive -->
+
+
+</body>
+
+
+</html>

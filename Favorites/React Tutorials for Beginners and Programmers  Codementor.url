@@ -1,0 +1,12 @@
+[DEFAULT]
+BASEURL=https://www.codementor.io/reactjs/tutorial
+[DOC#3]
+BASEURL=https://www.codementor.io/reactjs/tutorial
+ORIGURL=
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,11
+[InternetShortcut]
+URL=https://www.codementor.io/reactjs/tutorial
+IDList=
+IconFile=https://cdn.codementor.io/assets/favicon-80ce63787c696f7d394821f029db8c4c.ico
+IconIndex=1

@@ -1,0 +1,15 @@
+[DEFAULT]
+BASEURL=https://angularjs.org/
+[DOC_twitter-widget-0]
+BASEURL=https://platform.twitter.com/widgets/follow_button.d59f1863bc12f58215682d9908af95aa.en.html
+ORIGURL=https://platform.twitter.com/widgets/follow_button.d59f1863bc12f58215682d9908af95aa.en.html#dnt=false&id=twitter-widget-0&lang=en&screen_name=angularjs&show_count=true&show_screen_name=true&size=m&time=1474316127743
+[DOC_twitter-widget-1]
+BASEURL=https://platform.twitter.com/widgets/tweet_button.d59f1863bc12f58215682d9908af95aa.en.html
+ORIGURL=https://platform.twitter.com/widgets/tweet_button.d59f1863bc12f58215682d9908af95aa.en.html#dnt=false&id=twitter-widget-1&lang=en&original_referer=https%3A%2F%2Fangularjs.org%2F&size=m&text=AngularJS%20-%20HTML%20Enhanced%20for%20Web%20Apps&time=1474316127744&type=share&url=http%3A%2F%2Fangularjs.org&via=angularjs
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,11
+[InternetShortcut]
+URL=https://angularjs.org/
+IDList=
+IconFile=https://angularjs.org/favicon.ico
+IconIndex=1

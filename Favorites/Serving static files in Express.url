@@ -1,0 +1,9 @@
+[DEFAULT]
+BASEURL=https://expressjs.com/en/starter/static-files.html
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,11
+[InternetShortcut]
+URL=https://expressjs.com/en/starter/static-files.html
+IDList=
+IconFile=https://expressjs.com/images/favicon.png
+IconIndex=1

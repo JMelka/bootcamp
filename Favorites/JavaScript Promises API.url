@@ -1,0 +1,9 @@
+[DEFAULT]
+BASEURL=https://davidwalsh.name/promises
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,11
+[InternetShortcut]
+URL=https://davidwalsh.name/promises
+IDList=
+IconFile=https://davidwalsh.name/wp-content/themes/punky/images/favicon-32.png
+IconIndex=1

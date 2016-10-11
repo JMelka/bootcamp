@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<p>Click the table headers to change the sorting order:</p>
+
+<div ng-app="myApp" ng-controller="namesCtrl">
+
+<p>Category: <input type="text" ng-model="test"></p>
+<p>Price: <input type="text" ng-model="test2"></p>
+
+<label>Order by</label>
+<select ng-model="selectedOrder" ng-options="option for option in options"></select>
+
+<table border="1" width="100%">
+<tr>
+<th ng-click="orderByMe('name')">List Id</th>
+<th ng-click="orderByMe('cat')">Category</th>
+<th ng-click="orderByMe('country')">Price</th>
+</tr>
+<tr ng-repeat="x in names | filter:test | filter:test2 | orderBy:myOrderBy | orderBy:selectedOrder">
+<td>{{x.name}}</td>
+<td>{{x.cat}}</td>
+<td>{{x.country | currency}}</td>
+</tr>
+</table>
+
+</div>
+
+<form>
+    <br/>
+    <input type="file" name="photo" style="border: solid">
+    <input type="submit">
+    </div>
+</form>
+
+<script>
+angular.module('myApp', []).controller('namesCtrl', function($scope) {
+    $scope.names = [
+        {name:'pic 1',cat:'soccer', country: 5.00},
+        {name:'pic 2',cat:'mls soccer',country:12.00},
+        {name:'pic 3',cat:'soccer',country:30.00},
+        {name:'pic 4',cat:'soccer',country:55.00},
+        {name:'pic 5',cat:'biking',country:25.25},
+        {name:'pic 6',cat:'soccer',country:15.00},
+        {name:'pic 7',cat:'football',country:10.00},
+        {name:'pic 8',cat:'soccer',country:1.00},
+        {name:'pic 9',cat:'nfl football',country:1.50}
+        ];
+    $scope.orderByMe = function(x) {
+        $scope.myOrderBy = x;
+    }
+
+     $scope.options = ['name', 'cat', 'country'];
+});
+</script>
+
+</body>
+</html>
+

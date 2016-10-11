@@ -1,0 +1,71 @@
+      self.sendEmail = function (email, listid, body) {
+        var link = "mailto:" + email
+          + "?subject=New%20email " + escape(subject)
+          + "&body=" + escape(body);
+
+        window.location.href = link;
+      }
+
+ Note: Make sure to Register with LetGo to get your photos on the line!
+
+
+      //get all the listings
+      $http.get('/getListings').then(function (response) {
+        self.listings = response.data;
+        console.log('listing count' + self.listings.length)
+
+        if (self.listings.length > 0) {
+          $http.get('/getWatchList/' + cUserid).then(function (response) {
+
+            mylistings = response.data;
+            console.log('listing count' + mylistings.length)
+
+            if (mylistings.length > 0) {
+              for (var i = 0; i < self.listings.length; i++) {
+                self.listings[i].liked = true;
+              }
+
+
+            } else {
+
+              for (var i = 0; i < self.listings.length; i++) {
+                self.listings[i].liked = false;
+              }
+
+            }
+
+          })
+
+
+        }
+
+
+ CASE WHEN year = 'SR' THEN 'yes'
+            ELSE NULL END AS is_a_senior
+
+SELECT A.NAME, A.EMAIL, B.*, C.LISTID as LIKE FROM users as A inner join listing as B on A.USERID = B.USERID left outer join watchlist as C on B.LISTID = C.LISTID
+
+
+      //get all the listings
+      $http.get('/getListings').then(function (response) {
+        self.listings = response.data;
+        console.log('listing count' + self.listings.length)
+
+        if (self.listings.length > 0) {
+          $http.get('/getWatchList/' + cUserid).then(function (response) {
+
+            mylistings = response.data;
+            console.log('my watch count' + mylistings.length)
+            self.watching = mylistings.length;
+
+            for (var i = 0; i < self.listings.length; i++) {
+              self.listings[i].liked = false;
+              for (var my = 0; my < mylistings.length; my++) {
+                if (self.listings[i].listid === mylistings[my].listid) {
+                  self.listings[i].liked = true;
+                }
+              }
+            }
+          });
+        }
+      });

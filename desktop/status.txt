@@ -1,0 +1,33 @@
+abc123XYZ@ssa!
+
+<input name='status' ng-model="$ctrl.listing.status" class="textBox" required>
+
+
+                <label class='lgLabel'>Status</label>
+                
+                <select name='status' ng-model="ctrl.listing.status" class="textBox" required>
+                <option value="POSTED" onselect="ctrl.selectStatus('POSTED')">POSTED</option>
+                <option value="PENDING" onselect="ctrl.selectStatus('PENDING')">PENDING</option>
+                <option value="SOLD" onselect="ctrl.selectStatus('SOLD')">SOLD</option>
+                </select>
+                </select>
+                <span ng-show="updateListingForm.status.$error.required">Status is Required!</span>
+                        <br>
+                        <br>
+
+      self.selectStatus(value) = function (){
+        if (value == "SOLD"){
+          self.listing.status = "SOLD";
+        } else if (value == "PENDING") {
+          self.listing.status = "PENDING";
+        } else {
+          self.listing.status = "Unknown";
+        }
+        
+      };
+
+                <select name='status' ng-model="ctrl.listing.status" class="textBox" required>
+                <option value="POSTED" onselect="selectStatus('POSTED')">POSTED</option>
+                <option value="PENDING" onselect="selectStatus('PENDING')">PENDING</option>
+                <option value="SOLD" onselect="selectStatus('SOLD')">SOLD</option>
+                </select>

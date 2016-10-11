@@ -1,0 +1,1 @@
+SELECT A.PictureId, A.UserName, A.ActualFileName, A.SystemFileName, A.Insrt_TS as PictureDate , B.CommentId as CommentId, B.UserName as CommentName, B.Message as Message, B.Insrt_TS as CommentDate FROM Picture as A left outer join Comment as B on A.PictureId = B.PictureId where A.UserName = 'JMelka'

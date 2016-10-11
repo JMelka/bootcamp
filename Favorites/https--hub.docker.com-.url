@@ -1,0 +1,15 @@
+[DEFAULT]
+BASEURL=https://hub.docker.com/
+[DOC#8]
+BASEURL=https://hub.docker.com/
+ORIGURL=
+[DOC#9]
+BASEURL=https://hub.docker.com/
+ORIGURL=
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,11
+[InternetShortcut]
+URL=https://hub.docker.com/
+IDList=
+IconFile=https://hub.docker.com/favicon.ico
+IconIndex=1

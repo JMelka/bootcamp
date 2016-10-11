@@ -1,0 +1,9 @@
+[DEFAULT]
+BASEURL=https://gist.github.com/BrianWill/d7e02cdeb8d9c43152750c52887418ff
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,11
+[InternetShortcut]
+URL=https://gist.github.com/BrianWill/d7e02cdeb8d9c43152750c52887418ff
+IDList=
+IconFile=https://assets-cdn.github.com/favicon.ico
+IconIndex=1

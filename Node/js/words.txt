@@ -1,0 +1,5 @@
+run
+walk
+bike
+hike
+jump

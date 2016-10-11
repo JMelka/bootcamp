@@ -1,0 +1,9 @@
+[DEFAULT]
+BASEURL=http://blog.modulus.io/nodejs-and-express-create-rest-api
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,2
+[InternetShortcut]
+URL=http://blog.modulus.io/nodejs-and-express-create-rest-api
+IDList=
+IconFile=http://blog.modulus.io/favicon-196x196.png
+IconIndex=1
