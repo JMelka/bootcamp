@@ -1,0 +1,70 @@
+<html ng-app="myApp">
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+
+<body ng-controller="myCtrl">
+<input type = "text" ng-model = "movie"/>
+<p ng-click="myFunction()"> <button>Search Movie</button></p>
+
+<br/>
+
+<br/>
+<p id="searchResults"></p>
+<br><br>
+
+    <div id="movieDiv"/></div>
+    <div>
+       <div id="movie-content" style="float:right; width:700px;"></div>
+       <div id="movie-poster" style="float:left;"></div>
+   </div>
+
+<script>
+   var app = angular.module('myApp',[]);
+
+   app.controller('myCtrl',function($window,$scope){
+       $scope.myFunction = function(){
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            var data = JSON.parse(this.responseText);
+            console.log(data);
+            updateMovie(data);
+        }
+    };
+    xhttp.open("GET", "http://www.omdbapi.com/?t=" + $scope.movie + "&y=&plot=short&r=json", true);
+    xhttp.send();
+
+var sr = document.getElementById("searchResults");
+
+var div = document.getElementById('movieDiv');
+var content = document.getElementById('movie-content');
+var poster = document.getElementById('movie-poster');
+
+function updateMovie(movieInfo) {
+    sr.innerHTML = "<b>Title:  </b>" + movieInfo.Title + " <b>Movie Year: </b>" + movieInfo.Year;
+
+    content.innerHTML = '';
+    poster.innerHTML = '';
+    var img = document.createElement('img');
+
+    img.src = movieInfo.Poster;
+    poster.appendChild(img);
+
+    for (var key in movieInfo) {
+        if (key !== "Poster") {
+            content.innerHTML += "<b>"+key+"</b>: "+ movieInfo[key] + "<br />";
+        }
+    }
+
+}
+
+       }
+   });
+
+
+</script>
+
+</body>
+</html>
